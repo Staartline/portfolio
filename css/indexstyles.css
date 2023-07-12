@@ -5,9 +5,16 @@
 	/*Define Colors*/
 	--PortfolioBody: #FAF8F1;
 	--PortfolioText: #144272;
-	--PortfolioAction: #FFFFD0;
+	--PortfolioTextGrey:#252525ff;
+	--PortfolioLinks:#1974D2;
+	--PortfolioLinksHover:#0C3865;
+
+	--PortfolioHeaderFooterLinks: #ffc556ff;
 	--PortfolioHeaderFooter:#144272;
 	--PortfolioHeaderFooterText: #FAF8F1;
+
+	--PortfolioGithubGrey:#0d1117;
+	--PortfolioGithubGreen:#26a641;
 
 	/*Define Margins*/
 	--paddingLeftRight:5px;
@@ -23,22 +30,21 @@ html{
 }
 
 body{
-	
 	background-color: var(--PortfolioBody);
-	color:var(--PortfolioText);
-	text-align: center;
-	margin:0px;
+	color:var(--PortfolioTextGrey);
 	font-family: 'Ysabeau Infant', sans-serif;
 	font-size: 1.5rem;
-	font-weight: medium;
-
-
+	margin:0px;
+	text-align: center;
 }
 
 /*Headers*/
 h1, h2, h3{
+
+	color:var(--PortfolioText);
 	font-family: 'Fredoka', sans-serif;
 	font-size: 3rem;
+	font-weight: bold;
 }
 
 h2{
@@ -46,7 +52,7 @@ h2{
 }
 
 h3{
-	font-size: 1.5rem;
+	font-size: 2rem;
 }
 
 
@@ -86,7 +92,6 @@ ul{
 
 .headerul{
 	margin-right: 10px;
-
 }
 
 .headerul > li{
@@ -104,7 +109,7 @@ ul{
 
 #technologies > ul{
 	columns: 3;
- 	width: 50%;
+ 	width: 40%;
   	display: inline-block;
 }
 
@@ -126,27 +131,74 @@ ul{
 	border-radius: 10px;
 	border-color: var(--PortfolioBody);
 	border: double 1px;
+	min-height: 400px;
 }
 
 .portfolioitem:hover{
-	background-color: green;
+	background-color:#FFE7BB;
 	transition: ease 1s;
 }
 
-.portfolioitem > img{
+.portolioitemimg{
+	min-height: 40%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.portolioitemimg > img{
 	width: 80%;
 	height: auto;
-	min-height: 50%;
 	border-radius: 10px;
 }
 
-.portfolioitem a{
-	color:var(--PortfolioHeaderFooter);
+.portfolioitem > p{
+	width: 75%;
+	margin: auto;
 }
 
-.portfolioitem a:hover{
-	color:var(--PortfolioHeaderFooter);
+.portolioitembuttons{
+	display:flex;
+	gap: 10px;
+	width: 100%;
+	justify-content: center;
+	padding: 10px 0px;
+
 }
+
+.portolioitembuttons > button{
+	font-size:1.5rem;
+	border-radius: 30px;
+	padding: 5px 15px;
+	background-color: transparent;
+	border-color:var(--PortfolioLinks);
+	color:var(--PortfolioLinks);
+}
+
+.portolioitembuttons > button:hover{
+	border-color:var(--PortfolioLinksHover);
+	color:var(--PortfolioLinksHover);
+}
+
+.portolioitembuttons > .GitHubButton{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--PortfolioGithubGrey);
+	border-color: var(--PortfolioGithubGrey);
+
+}
+
+.portolioitembuttons > .GitHubButton:hover{
+	color:var(--PortfolioGithubGreen);
+	border-color: var(--PortfolioGithubGreen);
+}
+
+.GitHubButton > img{
+	padding-right:2px;
+}
+
+
 
 /*Contact Informationation*/
 
@@ -155,24 +207,37 @@ ul{
 }
 
 .emailButton{
-
 	font-size:2rem;
 	border-radius: 30px;
 	padding: 5px 15px;
-	border-color:var(--PortfolioAction);
+	border-color:var(--PortfolioLinks);
+	background-color: transparent;
+	color: var(--PortfolioLinks);
+	transform: ease 1s;
 
 }
+
+.emailButton:hover{
+	border-color:var(--PortfolioLinksHover);
+	background-color: transparent;
+	color: var(--PortfolioLinksHover);
+	
+}
+
 a{
-	color:var(--PortfolioAction);
+	color:var(--PortfolioHeaderFooterLinks);
+	text-decoration: none;
 }
 
 a:hover{
 	color:;
+	text-decoration: underline;
+	transition: ease 1s;
 }
 
 /*MOBILE RESPONSIVE*/
 
-@media(max-width: 600px){
+@media(max-width: 700px){
 
 	.portfoliogrid{
 		grid-template-columns: 1fr;
@@ -183,6 +248,5 @@ a:hover{
 	 	width: 70%;
 	  	display: inline-block;
 	}
-
 }
 
