@@ -243,6 +243,10 @@ a:hover{
 		grid-template-columns: 1fr;
 	}
 
+	.portfolioitem{
+		min-height: 450px;
+	}
+
 	#technologies > ul{
 		columns: 2;
 	 	width: 70%;
