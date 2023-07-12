@@ -1,0 +1,152 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Ysabeau+Infant&display=swap');
+
+
+:root{
+	/*Define Colors*/
+	--PortfolioBody: #FAF8F1;
+	--PortfolioText: #144272;
+	--PortfolioAction: #FFFFD0;
+	--PortfolioHeaderFooter:#144272;
+	--PortfolioHeaderFooterText: #FAF8F1;
+
+	/*Define Margins*/
+	--paddingLeftRight:5px;
+
+	/*Define Font Sizes*/
+}
+
+body{
+	
+	background-color: var(--PortfolioBody);
+	color:var(--PortfolioText);
+	text-align: center;
+	margin:0px;
+	font-family: 'Ysabeau Infant', sans-serif;
+	font-size: 1.5rem;
+	font-weight: medium;
+}
+
+
+h1, h2{
+	font-family: 'Fredoka', sans-serif;
+	font-size: 3rem;
+}
+
+h2{
+	font-size: 2rem;
+}
+
+header, footer{
+	background-color: var(--PortfolioHeaderFooter);
+	color: var(--PortfolioHeaderFooterText);
+	padding: var(--paddingLeftRight);
+}
+
+footer{
+	display:flex;
+	justify-content: space-evenly;
+	gap:10px;
+
+}
+
+.flexcontainer{
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+
+	width:98vw;
+}
+
+.logo{
+
+}
+
+ul{
+	list-style: none;
+	padding: 0px;
+}
+
+.headerul{
+
+	
+
+	margin-right: 10px;
+
+}
+
+.headerul > li{
+	display: inline-block;
+	padding: 10px;
+}
+
+#technologies > ul{
+	columns: 3;
+ 	width: 50%;
+  	display: inline-block;
+}
+
+.skillsul{
+	padding: 0px 8px;
+}
+/*Portfolio grid*/
+
+
+
+.portfoliogrid{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+
+	gap: 10px;
+	width: 80vw;
+	margin: auto;
+}
+
+.portfolioitem{
+	border-radius: 10px;
+	border-color: var(--PortfolioBody);
+	border: double 1px;
+	background-color: ;
+}
+
+.portfolioitem > img{
+	width: 80%;
+	height: auto;
+}
+
+#contact{
+	padding:10px 20px;
+}
+
+.emailButton{
+
+	font-size:2rem;
+	border-radius: 30px;
+	padding: 5px 15px;
+	border-color:var(--PortfolioAction);
+
+}
+a{
+	color:var(--PortfolioAction);
+}
+
+a:hover{
+	color:;
+}
+
+.portfolioitem a{
+	color:var(--PortfolioHeaderFooter);
+}
+
+.portfolioitem a:hover{
+	color:var(--PortfolioHeaderFooter);
+}
+
+@media(max-width: 600px){
+
+	.portfoliogrid{
+		grid-template-columns: 1fr;
+	}
+
+}
+
