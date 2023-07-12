@@ -59,7 +59,9 @@ footer{
 }
 
 .logo{
-
+	display: flex;
+	justify-content: center;
+	padding: 10px;
 }
 
 ul{
@@ -68,9 +70,6 @@ ul{
 }
 
 .headerul{
-
-	
-
 	margin-right: 10px;
 
 }
