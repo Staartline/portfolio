@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Ysabeau+Infant&display=swap');
 
 
@@ -16,6 +15,13 @@
 	/*Define Font Sizes*/
 }
 
+html{
+	/*Ensures Smooth Scrolling
+	https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link
+	*/
+	scroll-behavior:smooth;
+}
+
 body{
 	
 	background-color: var(--PortfolioBody);
@@ -25,10 +31,12 @@ body{
 	font-family: 'Ysabeau Infant', sans-serif;
 	font-size: 1.5rem;
 	font-weight: medium;
+
+
 }
 
-
-h1, h2{
+/*Headers*/
+h1, h2, h3{
 	font-family: 'Fredoka', sans-serif;
 	font-size: 3rem;
 }
@@ -36,6 +44,13 @@ h1, h2{
 h2{
 	font-size: 2rem;
 }
+
+h3{
+	font-size: 1.5rem;
+}
+
+
+/*Header and Footers*/
 
 header, footer{
 	background-color: var(--PortfolioHeaderFooter);
@@ -79,18 +94,22 @@ ul{
 	padding: 10px;
 }
 
+
+/*Skills*/
+.skillsul{
+	padding: 0px 8px;
+}
+
+/*Technologies*/
+
 #technologies > ul{
 	columns: 3;
  	width: 50%;
   	display: inline-block;
 }
 
-.skillsul{
-	padding: 0px 8px;
-}
+
 /*Portfolio grid*/
-
-
 
 .portfoliogrid{
 	display: grid;
@@ -101,17 +120,35 @@ ul{
 	margin: auto;
 }
 
+/*Portfolio items*/
+
 .portfolioitem{
 	border-radius: 10px;
 	border-color: var(--PortfolioBody);
 	border: double 1px;
-	background-color: ;
+}
+
+.portfolioitem:hover{
+	background-color: green;
+	transition: ease 1s;
 }
 
 .portfolioitem > img{
 	width: 80%;
 	height: auto;
+	min-height: 50%;
+	border-radius: 10px;
 }
+
+.portfolioitem a{
+	color:var(--PortfolioHeaderFooter);
+}
+
+.portfolioitem a:hover{
+	color:var(--PortfolioHeaderFooter);
+}
+
+/*Contact Informationation*/
 
 #contact{
 	padding:10px 20px;
@@ -133,13 +170,7 @@ a:hover{
 	color:;
 }
 
-.portfolioitem a{
-	color:var(--PortfolioHeaderFooter);
-}
-
-.portfolioitem a:hover{
-	color:var(--PortfolioHeaderFooter);
-}
+/*MOBILE RESPONSIVE*/
 
 @media(max-width: 600px){
 
