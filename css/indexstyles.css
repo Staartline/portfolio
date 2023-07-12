@@ -248,5 +248,9 @@ a:hover{
 	 	width: 70%;
 	  	display: inline-block;
 	}
+
+	footer{
+		display:block;
+	}
 }
 
