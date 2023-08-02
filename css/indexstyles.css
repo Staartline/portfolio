@@ -33,7 +33,6 @@ body{
 	background-color: var(--PortfolioBody);
 	color:var(--PortfolioTextGrey);
 	font-family: 'Ysabeau Infant', sans-serif;
-	font-size: 1.5rem;
 	margin:0px;
 	text-align: center;
 }
@@ -43,16 +42,13 @@ h1, h2, h3{
 
 	color:var(--PortfolioText);
 	font-family: 'Fredoka', sans-serif;
-	font-size: 3rem;
 	font-weight: bold;
 }
 
 h2{
-	font-size: 2rem;
 }
 
 h3{
-	font-size: 2rem;
 }
 
 
